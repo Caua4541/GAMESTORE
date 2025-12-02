@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore</title>
+    <link rel="stylesheet" href="/style/globais.css" />
+</head>
+<body>
+    <div class="navbar">
+      <div class="header-inner-content">
+        <h1 class="logo">GAME<span>STORE</span></h1>
+        <nav>
+          <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="minha-conta.html">Conta</a></li>
+         </ul>
+       </nav>
+            <div class="nav-icon-container">
+           <a href="carrinho.html"><img src="images/cart.png" /></a>
+            <img src="images/menu.png" class="menu-button" />
+        </div>
+      </div>
+     </div>
+     <!-- Main Content -->
+      <main>
+        <section class="produto-detalhe">
+            <div class="container-produto">
+                
+                <div class="produto-midia">
+                    <img src="/images/products/product-21.png" alt="Soundbar Gamer Trust Gxt 619w Thorne, Usb, Abs, 12w, Branco" class="imagem-principal" id="imgPrincipal">
+
+                </div>
+
+                <div class="produto-info">
+                    <p class="produto-nome-detalhe">Soundbar Gamer Trust Gxt 619w Thorne, Usb, Abs, 12w, Branco</p>
+                    <h1 class="titulo-destaque">Leve a Imersão Para o Próximo Nível</h1>
+                    <p class="produto-preco-detalhe">R$ 98,89</p>
+                    <div class="opcoes-compra">
+                        
+                        <div class="acao-compra">
+                            <input type="number" value="1" min="1" class="quantidade-input">
+                            <button class="btn-carrinho"
+        onclick="adicionarAoCarrinho(
+            'SOUNDBAR-TRUST-GXT619W', 
+            'Soundbar Gamer Trust Gxt 619w Thorne, Usb, Abs, 12w, Branco', 
+            98.89, 
+            'images/products/product-20.png', // Substitua pelo caminho real da imagem
+            document.querySelector('.quantidade-input').value // Pega a quantidade do input
+        )">
+    Adicionar ao Carrinho
+    </button>       
+<script src="app.js"></script> 
+   
+                        </div>
+                    </div>
+                    
+                    <div class="produto-descricao">
+                        <h2>Descrição do Produto:</h2>
+                        <p>Eleve sua experiência de áudio com a Soundbar Gamer Trust GXT 619W Thorne. Projetada especialmente para gamers, esta soundbar oferece um som claro e potente que aprimora a imersão em seus jogos favoritos.</p>
+                        <p>Com potência de 12W, a Thorne proporciona graves profundos e
+                            agudos nítidos, garantindo que cada detalhe sonoro seja ouvido com clareza. A conexão USB facilita a instalação, permitindo que você conecte facilmente ao seu PC ou console.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+           <section class="produtos-relacionados-container">
+    <div class="produtos-relacionados-cabecalho">
+        <h2 class="produtos-relacionados-titulo">Produtos Relacionados</h2>
+        <a href="produtos.html" class="produtos-relacionados-link">Veja mais</a>
+    </div>
+    
+    <div class="produtos-relacionados-lista">
+        </div>
+    
+            <div class="page-inner-content">
+                <div class="cols cols-4">
+                    <div class="product">
+                        <a href="ver-produtos.html"><img src="/images/products/product-6.png" alt="" /></a>
+                        <p class="product-name">Controle Sony DualSense PS5 Sem Fio</p>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <p class="product-price"><span>R$</span>350,00</p>
+                    </div>
+                    <div class="product">
+                        <a href="ver-produtos2.html"><img src="/images/products/product-7.png" alt="" /></a>
+                        <p class="product-name">Cadeira Gamer Otello Preto e Vermelho</p>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                        <p class="product-price"><span>R$</span>649,99</p>
+                    </div>
+                    <div class="product">
+                        <a href="ver-produtos3.html"><img src="/images/products/product-13.png" alt="" /></a>
+                        <p class="product-name">Volante Thrustmaster T80 Ferrari 488 Gtb Edition Compativel Preto</p>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <p class="product-price"><span>R$</span>2.750,00</p>
+                    </div>
+                    <div class="product">
+                        <a href="ver-produtos4.html"><img src="/images/products/product-16.png" alt="" /></a>
+                        <p class="product-name">Headset Gamer Redragon Zeus X Rgb Usb 7.1 Surround Sound Virtual H510-rgb Cor:preto</p>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <p class="product-price"><span>R$</span>329,99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+    </main>
+
+    <footer class="gray-background">
+        <div class="page-inner-content footer-content">
+            <div class="download-options">
+                <p>Baixe nosso aplição</p>
+                <p>Baixe nosso aplição para Android e IOS</p>
+                <div>
+                    <img src="/images/app-store.png" alt="" />
+                    <img src="/images/play-store.png" alt="" />
+                </div>
+            </div>
+
+            <div class="logo-footer">
+                <h1 class="logo">GAME<span>STORE</span></h1>
+                <p>Nosso objetivo é a criação de um site voltado para a apresentação de produtos gamers.</p>
+            </div>
+
+            <div class="links-footer">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li>Cupons</li>
+                    <li>Blog Post</li>
+                    <li>Políticas</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <hr class="page-inner-content" />
+
+        <div class="page-inner-content copyright"> 
+            <p>Copyright 2025 - Cauã Robson - Todos Direitos Reservados</p>
+        </div>
+    </footer>
+
+     <script>
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
+
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle('show-menu');
+        });
+
+        // JS para mudança de fotos
+        const miniaturas = document.querySelectorAll('.miniatura');
+        const imgPrincipal = document.getElementById('imgPrincipal');
+
+        miniaturas.forEach(miniatura => {
+            miniatura.addEventListener('click', () => {
+                // Remove active class from all
+                miniaturas.forEach(m => m.classList.remove('active'));
+                // Add active to clicked
+                miniatura.classList.add('active');
+                // Change main image
+                imgPrincipal.src = miniatura.dataset.src;
+            });
+        });
+     </script>
+</body>
+</html>

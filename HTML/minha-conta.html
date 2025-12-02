@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Cadastro - GameStore</title>
+    <link rel="stylesheet" href="style/globais.css" />
+</head>
+<body>
+
+    <div class="navbar">
+      <div class="header-inner-content">
+        <h1 class="logo">GAME<span>STORE</span></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="minha-conta.html">Conta</a></li>
+         </ul>
+       </nav>
+            <div class="nav-icon-container">
+            <a href="carrinho.html"><img src="images/cart.png" /></a>
+            <img src="images/menu.png" class="menu-button" />
+        </div>
+      </div>
+     </div>
+
+     <!-- Main Content -->
+<main class="auth-main">
+    <div class="auth-container">
+
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="login-content">Entrar</button>
+            <button class="tab-button" data-tab="cadastro-content">Cadastro</button>
+        </div>
+
+        <div id="login-content" class="auth-form-content active">
+            <form class="auth-form" action="index.html" method="POST">
+                <div class="form-group">
+                    <label for="login-email">E-mail de acesso</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Digite sua senha</label>
+                    <input type="password" id="login-password" name="login-password" placeholder="********" required>
+                </div>
+                <button type="submit" class="submit-button">Entrar</button>
+                <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+            </form>
+        </div>
+
+        <div id="cadastro-content" class="auth-form-content">
+            <form class="auth-form" action="index.html" method="POST">
+                <div class="form-group">
+                    <label for="cadastro-nome">Nome Completo</label>
+                    <input type="text" id="cadastro-nome" name="cadastro-nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="cadastro-email">E-mail</label>
+                    <input type="email" id="cadastro-email" name="cadastro-email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="cadastro-password">Senha</label>
+                    <input type="password" id="cadastro-password" name="cadastro-password" placeholder="********" required>
+                </div>
+                <div class="form-group">
+                    <label for="cadastro-confirm-password">Confirmar Senha</label>
+                    <input type="password" id="cadastro-confirm-password" name="cadastro-confirm-password" placeholder="********" required>
+                </div>
+                <button type="submit" class="submit-button">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+    <footer class="gray-background">
+        <div class="page-inner-content footer-content">
+            <div class="download-options">
+                <p>Baixe nosso aplição</p>
+                <p>Baixe nosso aplição para Android e IOS</p>
+                <div>
+                    <img src="images/app-store.png" alt="" />
+                    <img src="images/play-store.png" alt="" />
+                </div>
+            </div>
+
+            <div class="logo-footer">
+                <h1 class="logo">GAME<span>STORE</span></h1>
+                <p> Nosso objetivo é a criação de um site voltado para a apresentação de produtos gamers.</p>
+            </div>
+
+            <div class="links-footer">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li>Cupons</li>
+                    <li>Blog Post</li>
+                    <li>Políticas</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="page-inner-content" />
+
+        <div class="page-inner-content copyright">
+            <p>Copyright 2025 - Cauã Robson - Todos Direitos Reservados</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

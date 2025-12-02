@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore</title>
+    <link rel="stylesheet" href="style/globais.css" />
+</head>
+<body>
+    <div class="navbar">
+      <div class="header-inner-content">
+        <h1 class="logo">GAME<span>STORE</span></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="minha-conta.html">Conta</a></li>
+         </ul>
+       </nav>
+            <div class="nav-icon-container">
+            <a href="carrinho.html"><img src="images/cart.png" /></a>
+            <img src="/images/menu.png" class="menu-button" />
+        </div>
+      </div>
+     </div>
+     <!-- Main Content -->
+      <main class="carrinho-main">
+    <div class="carrinho-container">
+        
+        <table class="tabela-carrinho">
+            <thead>
+            </thead>
+        <tbody id="tabela-corpo">
+        </tbody>
+</table>
+
+<span id="sub-total-valor">R$ 999,99</span>
+<span id="total-valor">R$ 1.076,99</span>
+
+<script src="app.js"></script>
+        </table>
+        
+        <div class="finalizar-compra-container">
+            <button class="botao-finalizar">Finalizar Compra</button>
+        </div>
+
+    </div>
+</main>
+    <footer class="gray-background">
+        <div class="page-inner-content footer-content">
+            <div class="download-options">
+                <p>Baixe nosso aplição</p>
+                <p>Baixe nosso aplição para Android e IOS</p>
+                <div>
+                    <img src="images/app-store.png" alt="" />
+                    <img src="images/play-store.png" alt="" />
+                </div>
+            </div>
+
+            <div class="logo-footer">
+                <h1 class="logo">GAME<span>STORE</span></h1>
+                <p>Nosso objetivo é a criação de um site voltado para a apresentação de produtos gamers.</p>
+            </div>
+
+            <div class="links-footer">
+                <h3>Links úteis</h3>
+                <ul>
+                    <li>Cupons</li>
+                    <li>Blog Post</li>
+                    <li>Políticas</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <hr class="page-inner-content" />
+
+        <div class="page-inner-content copyright"> 
+            <p>Copyright 2025 - Cauã Robson - Todos Direitos Reservados</p>
+        </div>
+    </footer>
+
+     <script>
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
+
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle('show-menu');
+        });
+
+        // JS para mudança de fotos
+        const miniaturas = document.querySelectorAll('.miniatura');
+        const imgPrincipal = document.getElementById('imgPrincipal');
+
+        miniaturas.forEach(miniatura => {
+            miniatura.addEventListener('click', () => {
+                // Remove active class from all
+                miniaturas.forEach(m => m.classList.remove('active'));
+                // Add active to clicked
+                miniatura.classList.add('active');
+                // Change main image
+                imgPrincipal.src = miniatura.dataset.src;
+            });
+        });
+     </script>
+</body>
+</html>
