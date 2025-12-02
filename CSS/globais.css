@@ -1,0 +1,1477 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos Gerais para a Seção Sobre */
+.secao-sobre {
+    background-color: #ffffff; /* ⚪ Fundo Branco */
+    color: #333333; /* Cor do texto principal: Cinza Escuro */
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para o container (centraliza o conteúdo) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilo do Título Principal */
+.titulo-principal {
+    font-size: 2.5em;
+    color: #ff6600; /* 🟠 Laranja Vibrante como destaque */
+    margin-bottom: 40px;
+    border-bottom: 3px solid #eeeeee; /* Linha sutil clara */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Estilo da Introdução */
+.introducao {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555555; /* Texto da introdução um pouco mais claro */
+}
+
+/* Estilo do Subtítulo da Proposta de Valor */
+.subtitulo {
+    font-size: 1.8em;
+    color: #333333;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Estilo da Lista de Missão (estrutura de cartões) */
+.lista-missao {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo de cada item da lista (o "cartão") */
+.lista-missao li {
+    background-color: #f7f7f7; /* Fundo levemente cinza para destacar */
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-top: 5px solid #ff6600; /* Detalhe laranja na borda superior */
+    color: #333333; /* Cor do texto dentro do cartão */
+    transition: transform 0.3s ease;
+}
+
+.lista-missao li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.2); /* Sombra Laranja mais suave */
+}
+
+/* Título dentro do cartão */
+.lista-missao h4 {
+    font-size: 1.4em;
+    color: #ff6600; /* Laranja no título do cartão */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Texto de Fechamento */
+.fechamento {
+    font-size: 1.1em;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eeeeee; /* Fundo suave para o CTA */
+    border-radius: 5px;
+    color: #333333;
+}
+
+.fechamento strong {
+    color: #ff6600; /* Destaque laranja */
+}
+
+
+/* Centraliza o bloco principal (a caixa branca) */
+.auth-container {
+    max-width: 450px; 
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Estilo de caixa */
+    background-color: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    
+    /* Espaçamento vertical */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Garante que apenas o formulário ativo seja visível (essencial para o JS) */
+.auth-form-content {
+    display: none;
+}
+
+.auth-form-content.active {
+    display: block;
+}
+
+/* Estilização das Tabs (Entrar/Cadastro) */
+.tab-buttons {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-button {
+    flex: 1; 
+    background-color: transparent; 
+    color: #555; 
+    border: none;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 2px solid transparent; 
+}
+
+/* Cor Laranja para a Tab Ativa */
+.tab-button.active {
+    color: #ff6347; 
+    border-bottom-color: #ff6347; 
+}
+
+/* Cor Laranja para os Botões de Envio (Entrar/Cadastrar) */
+.auth-form .submit-button {
+    background-color: #ff6347; /* Laranja Vívido */
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.auth-form .submit-button:hover {
+    background-color: #e65a3d; 
+}
+
+/* Cor Laranja para o link "Esqueceu sua senha?" */
+.forgot-password {
+    color: #ff6347; 
+    text-decoration: none;
+    margin-top: 15px; 
+    display: block; 
+    text-align: center;
+}
+
+/* Variáveis de Cores */
+:root {
+    --cor-primaria: #ff0000; /* Vermelho/Laranja da imagem */
+    --cor-texto-principal: #333;
+    --cor-fundo-claro: #f8f8f8;
+    --cor-borda-cinza: #ccc;
+}
+
+/* Estilos Globais e Container */
+.carrinho-main {
+    padding: 20px;
+    background-color: var(--cor-fundo-claro);
+}
+
+.carrinho-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Tabela de Carrinho --- */
+
+.tabela-carrinho {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabela-carrinho th {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px;
+    text-align: left;
+    /* Alinha as colunas Quantidade e Valor à direita, como na imagem */
+    &:nth-child(2), &:nth-child(3) {
+        text-align: center;
+    }
+}
+
+.tabela-carrinho td {
+    border-bottom: 1px solid var(--cor-borda-cinza);
+    padding: 15px 10px;
+    vertical-align: middle;
+}
+
+/* Estilo do Item (Produto) */
+.item-produto {
+    display: flex;
+    align-items: center;
+}
+
+.produto-imagem {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.produto-detalhes {
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-nome {
+    font-weight: bold;
+    margin: 0;
+}
+
+.produto-valor-unitario {
+    font-size: 12px;
+    color: #666;
+}
+
+.remover-item {
+    font-size: 12px;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* Estilo da Quantidade */
+.item-quantidade {
+    text-align: center;
+}
+
+.quantidade-input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 4px;
+}
+
+/* Estilo do Valor */
+.item-valor {
+    text-align: right;
+    font-weight: bold;
+    color: var(--cor-texto-principal);
+}
+
+
+/* --- Resumo do Carrinho (Sub-Total, Frete, Total) --- */
+
+.carrinho-resumo {
+    width: 300px;
+    margin-left: auto; /* Alinha à direita */
+    padding-top: 15px;
+    border-top: 1px solid var(--cor-borda-cinza);
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.resumo-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-top: 10px;
+    border-top: 1px dashed var(--cor-borda-cinza);
+    margin-top: 10px;
+}
+
+/* --- Botão de Finalizar Compra --- */
+
+.finalizar-compra-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.botao-finalizar {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-finalizar:hover {
+    background-color: #cc0000;
+}
+
+
+/* --- RESPONSIVIDADE (Celulares) --- */
+
+@media (max-width: 768px) {
+    /* Esconde o cabeçalho da tabela em telas pequenas */
+    .tabela-carrinho thead {
+        display: none;
+    }
+
+    .tabela-carrinho, .tabela-carrinho tbody, .tabela-carrinho tr, .tabela-carrinho td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabela-carrinho tr {
+        margin-bottom: 20px;
+        border: 1px solid var(--cor-borda-cinza);
+        padding: 10px;
+    }
+
+    .tabela-carrinho td {
+        text-align: right;
+        border: none;
+        padding: 8px 0;
+        position: relative;
+    }
+
+    /* Adiciona Labels para os campos de Quantidade e Valor */
+    .tabela-carrinho td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+
+    /* Oculta as labels dos itens de produto (já têm imagem e nome) */
+    .item-produto::before {
+        content: none !important;
+    }
+
+    /* Altera o display dos itens para simular a tabela */
+    .item-produto {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .item-quantidade {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .item-valor {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .carrinho-resumo {
+        width: 100%; /* Ocupa a largura total em mobile */
+    }
+}
+
+/* Container Principal (Ainda usa Flexbox para alinhar Título e Dropdown) */
+.listagem-cabecalho {
+    display: flex !important; /* Garantindo que o display Flex seja aplicado */
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 0; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Título */
+.listagem-titulo {
+    font-size: 26px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    margin: 0 !important;
+}
+
+/* O seletor <select> em si */
+.ordenacao-select {
+    /* 1. Reset e Aparência - !important para remover o estilo padrão do navegador */
+    -webkit-appearance: none !important; 
+    -moz-appearance: none !important;
+    appearance: none !important;
+    
+    /* 2. Estilização da Borda e Fundo */
+    background-color: #fff !important; 
+    border: 1px solid #d9534f !important; /* Borda vermelha/rosa */
+    border-radius: 4px !important; 
+    
+    /* 3. Layout e Texto */
+    padding: 8px 10px !important; /* Espaçamento interno */
+    font-size: 14px !important;
+    color: #333 !important;
+    cursor: pointer !important;
+    
+    /* 4. Posição (Essencial para esconder a seta e usar uma customizada) */
+    position: relative; /* Para usar a seta customizada, se necessário */
+    padding-right: 30px !important; /* Cria espaço para a seta */
+}
+
+/* 5. Estilizando o ícone (seta) usando pseudo-elemento */
+.ordenacao-container {
+    position: relative; /* Permite posicionar o pseudo-elemento em relação a ele */
+}
+
+.ordenacao-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Ajusta a posição da seta */
+    transform: translateY(-50%);
+    
+    /* Criação da seta com CSS */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #6c757d; /* Cor da seta para baixo */
+    pointer-events: none; /* Garante que o clique passe para o <select> */
+}
+
+/* Estilos Gerais do Contêiner da Seção */
+.produtos-relacionados-container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 20px 15px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco para a seção */
+}
+
+/* Estilos do Cabeçalho (Título e "Veja mais") */
+.produtos-relacionados-cabecalho {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: space-between; /* Coloca o título à esquerda e o link à direita */
+    align-items: center; /* Alinha verticalmente no centro */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Linha sutil no rodapé do cabeçalho */
+    margin-bottom: 20px;
+}
+
+/* Estilos do Link "Veja mais" */
+.produtos-relacionados-link {
+    font-size: 14px;
+    color: #888; /* Cor mais suave para o link */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.3s ease;
+}
+
+.produtos-relacionados-link:hover {
+    color: #000; /* Escurece no hover para interação */
+}
+
+/* Estilos da Lista de Produtos (para os cards individuais, use este como base) */
+.produtos-relacionados-lista {
+    display: flex; /* Usa Flexbox para dispor os cards lado a lado */
+    gap: 20px; /* Espaço entre os cards */
+    overflow-x: auto; /* Permite rolar horizontalmente se os produtos não couberem */
+    padding-bottom: 10px; /* Espaço para a barra de rolagem, se houver */
+}
+
+/* Estilos Básicos de um Card de Produto (Exemplo) */
+.produto-card {
+    flex-shrink: 0; /* Impede que os cards encolham */
+    width: 250px; /* Largura fixa para cada card */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* Para garantir a responsividade em telas menores (opcional, mas recomendado) */
+@media (max-width: 768px) {
+    .produtos-relacionados-titulo {
+        font-size: 20px;
+    }
+    
+    .produtos-relacionados-lista {
+        /* Garante que os cards sejam fáceis de visualizar em telas pequenas */
+        flex-wrap: nowrap;
+    }
+}
+ 
+/* Defina o fundo do seu corpo/main como branco puro, se ainda não estiver */
+body, main {
+    background-color: #FFFFFF; /* Garante que o fundo da página seja branco */
+}
+
+/* Estilo para cada card de produto (onde você tem class="product") */
+.product {
+    background-color: #FFFFFF; /* Fundo branco para cada card de produto */
+    border: 1px solid #EEEEEE; /* Uma borda muito leve para delimitar os cards */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    display: flex; /* Para organizar o conteúdo */
+    flex-direction: column; /* Conteúdo empilhado */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave para o card inteiro */
+    transition: transform 0.2s ease-in-out; /* Animação suave no hover */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Efeito de "levantar" no hover */
+}
+
+/* Estilo para as imagens dentro dos cards de produto */
+.product-image {
+    max-width: 100%; /* Garante que a imagem não transborde o card */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+    /* Este é o ponto chave para simular a "integração": */
+    /* Se a imagem já tem um fundo branco, uma sombra sutil ao redor dela */
+    /* pode fazer com que ela pareça estar "flutuando" sobre o card branco. */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Sombra mais acentuada para a imagem em si */
+    border-radius: 4px; /* Opcional: bordas arredondadas para a imagem */
+}
+
+/* Ajustes para o layout da lista de produtos (se estiver usando flexbox ou grid) */
+.product-list {
+    display: grid; /* Ou flex, dependendo do seu layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Exemplo de grid responsivo */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+    max-width: 1200px; /* Largura máxima da lista */
+    margin: 0 auto; /* Centraliza a lista na página */
+}
+
+
+/* ==================================== */
+/* 1. Variáveis & Reset Global */
+/* ==================================== */
+
+:root {
+    /* Cores */
+    --cor-primaria: #ff5733; /* Vermelho/Laranja para destaque (botões, preços) */
+    --cor-secundaria: #000; /* Preto para headers e rodapé */
+    --cor-texto: #333;
+    --cor-fundo: #f8f8f8; /* Fundo levemente cinza */
+    --cor-branco: #fff;
+
+    /* Tipografia */
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-titulo: 2.5rem;
+    --tamanho-subtitulo: 1.5rem;
+
+    /* Espaçamento */
+    --espacamento-padrao: 20px;
+    --max-largura: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    background-color: var(--cor-branco);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* Container centralizado para todo o conteúdo principal */
+main {
+    max-width: var(--max-largura);
+    margin: 0 auto;
+    padding: 0 var(--espacamento-padrao);
+}
+
+/* Estilo para links de produtos (garante que o card é clicável) */
+.produto-card {
+    display: block; 
+    color: inherit;
+}
+.produto-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* ==================================== */
+/* 2. Cabeçalho & Navegação */
+/* ==================================== */
+
+/* Header padrão (index.html) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px var(--espacamento-padrao);
+    background-color: var(--cor-branco);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Uso de gap em vez de margin-left */
+}
+
+/* Header escuro (produtos.html e ver-produto.html) */
+.produtos-header {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+.produtos-header .logo {
+    color: var(--cor-branco);
+}
+
+.produtos-header nav a {
+    color: var(--cor-branco);
+    opacity: 0.7;
+}
+
+.produtos-header nav a.active {
+    opacity: 1;
+    border-bottom: 2px solid var(--cor-branco);
+    padding-bottom: 5px;
+}
+
+.produtos-header .carrinho-icon {
+    font-size: 1.2em;
+}
+
+/* ==================================== */
+/* 3. Seções de Listagem/Grid */
+/* ==================================== */
+
+/* Títulos de Seção (Produtos em Destaque, Novos Produtos, etc.) */
+.produtos-lista h2 {
+    text-align: center;
+    font-size: var(--tamanho-subtitulo);
+    margin: 40px 0 25px 0;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--cor-primaria);
+    width: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Grid de Imagens de Destaque (index.html) */
+.destaque-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.destaque-item {
+    flex: 1 1 30%; /* Padrão 3 colunas */
+    min-width: 250px;
+}
+
+/* Grid de Produtos (index.html e produtos.html) */
+.produtos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacamento-padrao);
+    justify-content: center;
+}
+
+.produto-card {
+    /* Base Mobile First: 2 colunas */
+    flex: 1 1 calc(50% - var(--espacamento-padrao) / 2);
+    max-width: 250px;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--cor-branco);
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.produto-card img {
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.produto-nome {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.estrelas {
+    color: var(--cor-primaria);
+    margin-bottom: 5px;
+}
+
+.produto-preco {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* ==================================== */
+/* 4. Página de Catálogo (Produtos.html) */
+/* ==================================== */
+
+.catalogo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+
+.titulo-categoria {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.filtro-ordenacao select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--cor-branco);
+}
+
+/* Paginação */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 8px;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+
+.page-link.active {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border-color: var(--cor-primaria);
+}
+
+/* ==================================== */
+/* 5. Página de Detalhes (ver-produto.html) */
+/* ==================================== */
+
+.produto-detalhe {
+    padding: 40px 0;
+}
+
+.container-produto {
+    display: flex;
+    flex-direction: column; /* Mobile First: Imagem em cima, info embaixo */
+    gap: 30px;
+}
+
+.produto-midia {
+    flex: 1;
+}
+
+.produto-info {
+    flex: 1;
+}
+
+/* Galeria de Miniaturas */
+.miniaturas-galeria {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.miniatura {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    transition: border-color 0.2s, opacity 0.2s;
+}
+
+.miniatura.active {
+    border: 2px solid var(--cor-primaria); /* Destaque na miniatura ativa */
+    opacity: 0.8;
+}
+
+/* Detalhes */
+.titulo-destaque {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.produto-preco-detalhe {
+    font-size: 2em;
+    color: var(--cor-primaria);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.select-tamanho {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.acao-compra {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.quantidade-input {
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-carrinho {
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    flex-grow: 1;
+    transition: background-color 0.2s;
+}
+
+.btn-carrinho:hover {
+    background-color: #e04a2d;
+}
+
+/* ==================================== */
+/* 6. Rodapé */
+/* ==================================== */
+
+footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 40px var(--espacamento-padrao);
+    margin-top: 40px;
+    text-align: center; /* Centralizado por padrão no mobile */
+}
+
+.footer-container {
+    max-width: var(--max-largura);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Mobile First: colunas empilhadas */
+    gap: 30px;
+}
+
+.coluna h3 {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.coluna ul {
+    list-style: none;
+}
+
+.app-links a {
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid var(--cor-branco);
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 7. Media Queries (Desktop/Tablet) */
+/* ==================================== */
+
+/* Tablet e Telas Maiores (>= 600px) */
+@media (min-width: 600px) {
+    
+    /* Grid de Produtos - 3 Colunas no Tablet */
+    .produto-card {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    /* Rodapé - 2 Colunas */
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: left;
+    }
+    
+    .coluna {
+        flex: 1 1 40%;
+    }
+}
+
+/* Desktop e Telas Grandes (>= 1024px) */
+@media (min-width: 1024px) {
+    
+    /* Header (index.html) */
+    header {
+        padding: 20px 5%;
+    }
+    
+    /* Grid de Destaque - 3 Colunas no Desktop */
+    .destaque-item {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    /* Grid de Produtos - 4 Colunas no Desktop */
+    .produto-card {
+        flex: 1 1 calc(25% - 15px);
+    }
+    
+    /* Ver Produto - 2 Colunas no Desktop */
+    .container-produto {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .produto-midia, .produto-info {
+        max-width: 50%;
+    }
+    
+    .select-tamanho {
+        width: 200px;
+    }
+
+    /* Rodapé - 4 Colunas no Desktop */
+    .footer-container {
+        justify-content: space-between;
+    }
+
+    .coluna {
+        flex: 0 1 200px; /* Largura fixa para 4 colunas */
+    }
+}
+
+/* Estilo do contêiner principal para centralizar */
+.paginacao {
+    display: flex;
+    justify-content: flex-start; /* Altera para left se precisar */
+    padding: 20px 0;
+}
+
+/* Remove a formatação padrão da lista */
+.paginacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilo para cada item da lista (botão) */
+.paginacao li {
+    display: inline-block;
+}
+
+/* Estilo geral dos links (botões) */
+.paginacao a {
+    display: block;
+    width: 40px; /* Largura do quadrado */
+    height: 40px; /* Altura do quadrado */
+    line-height: 40px; /* Centraliza o texto verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #444; /* Cor do texto padrão */
+    border: 1px solid #FFA500; /* Borda laranja */
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para o botão ativo (página atual) */
+.paginacao a.ativo {
+    background-color: #FFA500; /* Fundo laranja */
+    color: #fff; /* Texto branco */
+    border-color: #FFA500; /* Borda da mesma cor */
+}
+
+/* Efeito ao passar o mouse (hover) */
+.paginacao a:hover:not(.ativo) {
+    background-color: #FFC04C; /* Laranja mais claro no hover */
+    color: #444;
+}
+
+/* Estilo para a seta (seta-proxima) */
+.paginacao a.seta-proxima {
+    font-size: 1.5em; /* Aumenta um pouco a seta */
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'arial';
+}
+
+.heder-inner-contet{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+    background-color: #2c2c2c;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px #2c2c2c;
+    z-index: 99;
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    color: coral;
+}
+
+.logo span{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-icon-container{
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-icon-container img:first-child{
+    margin-right: 1rem;
+}
+
+nav ul li{
+    color: #fff;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.menu-button{
+    display: none;
+}
+
+header{
+    background-image: radial-gradient(#fff, #c7c7c7);
+}
+
+.header-bottom-side{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.header-bottom-side-left{
+    height: 100%;
+    flex-basis: 50%;
+}
+
+.header-bottom-side-left h2{
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.header-bottom-side-left button{
+    background-color: #0084ff;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    border-radius: 9999px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.header-bottom-side-left button:hover{
+    background-color: #004c94;
+}
+
+.header-bottom-side-right{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-bottom-side-right img{
+    width: 105%;
+
+}
+
+/*Media Queries */
+@media (max-width: 800px){
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .menu-button{
+        display: block;
+    }
+
+    .header-bottom-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    nav{
+        position:absolute;
+        background-color: #2c2c2c;
+        width: 100%;
+        top: 46px;
+        display: none;
+    }
+
+    .show-menu nav{
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+        
+    }
+}
+
+/* Header */
+
+/* Main Content */
+main{
+    background-color: #ebebeb;
+}
+.gray-background{
+    background-color: #2c2c2c;
+}
+
+.page-inner-content{
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+.cols{
+    display: grid;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+}
+
+.cols-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.cols-3 img{
+    max-width: 100%;
+}
+.cols-4 img{
+    max-width: 100%;
+}
+
+.cols-4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.cols>*{
+    cursor: pointer;
+    transition: all 0.2;
+}
+
+.cols>*:hover{
+    transform: translateY(-5px);
+}
+
+.section-title{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+}
+
+.subtitle-underline{
+    width: 100px;
+    height: 5px;
+    background: #0084ff;
+    border-radius: 9999px;
+    margin: 8px auto 0 auto;
+}
+
+.product{
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name{
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+.rate{
+    color: #0084ff;
+    font-size: 1.3rem;
+}
+
+.product-price span{
+    font-weight: 600;
+}
+
+.exclusive-container{
+    color: #fff;
+    flex-direction: row-reverse;
+    padding: 5rem 1rem;
+}
+
+.exclusive-container img{
+    max-width: 500px;
+}
+
+/* Media Queries */
+
+@media(max-width: 800px){
+    .section-title{
+        font-size: 1rem;
+    }
+
+    .cols-3{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cols-4{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-name,.product-price, .rate{
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+
+    .exclusive-container{
+        flex-direction: column-reverse;   
+    }
+
+    .exclusive-container img{
+        margin-bottom: 4rem;
+    }
+}
+
+/* Main Content */
+
+/* Testimonials */
+.testimonials{
+    display: flex;
+    padding: 4rem 1rem;
+    justify-content: space-evenly;
+}
+
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    text-align: center;
+    box-shadow: 0 0 15px #afafaf;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.testimonial:hover{
+    transform: translaterY(-5px);
+}
+
+.testimonial p{
+    margin: 5px 0;
+}
+
+.testimonial p:first-child{
+    font-weight: bold;
+    font-size: 5rem;
+    color: #0084ff;
+    margin-top: 3rem;
+    line-height: 2rem;
+}
+
+.testimonial p:last-child{
+    font-weight: bold;
+}
+
+/*Media Queries */
+@media (max-width: 800px){
+    .testimonials{
+        flex-direction: column;
+    }
+
+    .testimonial{
+        margin-bottom: 1.2rem;
+    }
+}
+
+
+/* Testimonials */
+
+
+/* Footer */
+.footer-content{
+    display: flex;
+    align-items: center;
+    color: #8f8f8f;
+    padding: 4rem 1rem;
+    gap: 2rem;
+}
+
+.download-options>*{
+    margin: 1rem 0;
+}
+
+.download-options>p:first-child{
+    font-weight: bold;
+    color: #fff;
+}
+
+.download-options>div{
+    display: flex;
+}
+
+.download-options>div img{
+    width: 180px;
+}
+
+.logo-footer{
+    text-align: center;
+}
+
+.links-footer h3{
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.links-footer ul{
+    list-style: none;
+}
+
+.links-footer ul li{
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.copyright{
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Media queries */
+
+@media(max-width: 800px){
+    .footer-content{
+        display: inline;
+        font-size: 0.8rem;
+    }
+
+    .footer-content>div{
+        padding: 1rem;
+    }
+
+    .download-options>div{
+        display: inline;
+    }
+
+    .download-options>div img{
+        width: 120px;
+    }
+
+    .copyright{
+        font-size: 0.8rem;
+    }
+}
+/* Footer */
+
